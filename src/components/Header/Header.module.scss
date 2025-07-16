@@ -1,0 +1,42 @@
+.header {
+    background-color: #06111a;
+    box-shadow: none;
+    padding: 15px 120px 15px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+}
+
+.yellow {
+    background-color: #ffc107;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.title {
+    font-weight: 600;
+    color: white;
+}
+
+.highlight {
+    color: #ffc107;
+}
+
+.subtitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #ccc;
+}
+
+.logo {
+    width: 310px;
+    height: 60px;
+}
+
+.menuItem {
+    font-size: 16px;
+    color: #fff;
+    text-transform: none;
+}
