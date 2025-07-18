@@ -1,0 +1,93 @@
+.wrapper {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  color: #333;
+}
+
+.toggleButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.tabButton {
+  padding: 10px 20px;
+  background-color: #fdf5e6;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.active {
+  background-color: #feca1b;
+  font-weight: bold;
+}
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mapImage {
+  width: 100%;
+  height: auto;
+}
+
+.marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.pin {
+  width: 40px;
+  height: 40px;
+  background-color: #feca1b;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  transform: rotate(45deg);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.tooltip {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: max-content;
+  max-width: 240px;
+  white-space: normal;
+  z-index: 10;
+}
