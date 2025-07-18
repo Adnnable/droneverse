@@ -1,10 +1,12 @@
-import styles from './News.module.scss'
+import styles from './News.module.scss';
 
 const bannerImages = [
   '../../../assets/img/news/1.png',
   '../../../assets/img/news/2.png',
   '../../../assets/img/news/3.png',
-  '../../../assets/img/news/4.png', // repeat for visual continuity
+  '../../../assets/img/news/4.png',
+  '../../../assets/img/news/3.png',
+  '../../../assets/img/news/2.png',
 ];
 
 const newsItems = [
@@ -41,7 +43,7 @@ const newsItems = [
 export default function NewsSection() {
   return (
     <section className={styles.wrapper}>
-      {/* Banner Carousel */}
+       {/* Banner Carousel */}
       <div className={styles.carousel}>
         {bannerImages.map((src, index) => (
           <div key={index} className={styles.bannerImage}>
@@ -49,15 +51,23 @@ export default function NewsSection() {
           </div>
         ))}
       </div>
+      {/* Header + Arrows Row */}
+      <div className={styles.newsHeaderWrapper}>
+        <div className={styles.newsHeader}>
+          <h2>Our latest news</h2>
+          <p>
+            Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots,
+            we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.
+          </p>
+        </div>
 
-      {/* News Content */}
-      <div className={styles.newsHeader}>
-        <h2>Our latest news</h2>
-        <p>
-          Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, <br />
-          we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.
-        </p>
+        <div className={styles.arrows}>
+          <button className={styles.arrowBtn}>◀</button>
+          <button className={styles.arrowBtn}>▶</button>
+        </div>
       </div>
+
+     
 
       {/* News Cards */}
       <div className={styles.newsGrid}>
@@ -75,12 +85,6 @@ export default function NewsSection() {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Arrows (static for now) */}
-      <div className={styles.arrows}>
-        <button className={styles.arrowBtn}>◀</button>
-        <button className={styles.arrowBtn}>▶</button>
       </div>
     </section>
   );

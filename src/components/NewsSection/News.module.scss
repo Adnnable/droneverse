@@ -1,14 +1,63 @@
 .wrapper {
   padding: 60px 20px;
+  max-width: 1280px;
+  margin: auto;
 }
 
+// ---- HEADER WRAPPER WITH ARROWS ----
+.newsHeaderWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.newsHeader {
+  max-width: 70%;
+}
+
+.newsHeader h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.newsHeader p {
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.arrows {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.arrowBtn {
+  background: #f0f0f0;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: #ddd;
+  }
+}
+
+// ---- CAROUSEL SECTION (ZIG-ZAG) ----
 .carousel {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  margin-bottom: 40px;
   scroll-snap-type: x mandatory;
   padding-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .bannerImage {
@@ -18,6 +67,16 @@
   border-radius: 12px;
   overflow: hidden;
   scroll-snap-align: start;
+  transition: transform 0.3s ease;
+
+  // Zig-zag offset
+  &:nth-child(even) {
+    margin-top: 20px;
+  }
+
+  &:nth-child(odd) {
+    margin-top: 0;
+  }
 }
 
 .bannerImage img {
@@ -26,23 +85,7 @@
   object-fit: cover;
 }
 
-.newsHeader {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.newsHeader h2 {
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.newsHeader p {
-  color: #333;
-  font-size: 16px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
+// ---- NEWS CARD GRID ----
 .newsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -94,19 +137,4 @@
 .cardContent p {
   font-size: 14px;
   color: #555;
-}
-
-.arrows {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.arrowBtn {
-  background: #f0f0f0;
-  border: none;
-  font-size: 24px;
-  padding: 8px 16px;
-  margin: 0 10px;
-  border-radius: 50%;
-  cursor: pointer;
 }
