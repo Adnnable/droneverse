@@ -1,10 +1,52 @@
 .wrapper {
-  padding: 60px 20px;
-  max-width: 1280px;
-  margin: auto;
+  padding: 90px 20px;
 }
 
-// ---- HEADER WRAPPER WITH ARROWS ----
+// === Banner Carousel ===
+.carousel {
+  margin-bottom: 40px;
+
+  .slick-slide {
+    padding: 10px;
+  }
+
+  .slick-list {
+    overflow: visible; // allow shifted cards to be visible
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.bannerImageWrapper {
+  margin-top: 0;
+  transition: margin-top 0.3s ease;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 455px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+}
+
+// Alternate up/down shift
+.shifted {
+  margin-top: 40px;
+}
+
+// === News Section Header ===
+
 .newsHeaderWrapper {
   display: flex;
   justify-content: space-between;
@@ -48,74 +90,11 @@
   &:hover {
     background: #ddd;
   }
-}
+
 
 // ---- CAROUSEL SECTION (ZIG-ZAG) ----
 }
 
-// === Banner Carousel ===
-.carousel {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 10px;
-  margin-bottom: 40px;
-  margin-bottom: 40px;
-
-  .slick-slide {
-    padding: 10px;
-  }
-
-  .slick-list {
-    overflow: visible; // allow shifted cards to be visible
-  }
-
-  .slick-track {
-    display: flex;
-    align-items: flex-start;
-  }
-}
-
-.bannerImageWrapper {
-  margin-top: 0;
-  transition: margin-top 0.3s ease;
-}
-
-.bannerImage {
-  width: 100%;
-  height: 455px;
-  border-radius: 12px;
-  overflow: hidden;
-  scroll-snap-align: start;
-  transition: transform 0.3s ease;
-
-  // Zig-zag offset
-  &:nth-child(even) {
-    margin-top: 20px;
-  }
-
-  &:nth-child(odd) {
-    margin-top: 0;
-  }
-}
-
-  img {
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
-  }
-}
-
-// Alternate up/down shift
-.shifted {
-  margin-top: 40px;
-}
-
-// ---- NEWS CARD GRID ----
-// === News Section Header ===
 .newsHeader {
   text-align: center;
   margin-bottom: 40px;
@@ -187,11 +166,6 @@
 .icon {
   width: 20px;
   height: 20px;
-}
-
-.cardContent p {
-  font-size: 14px;
-  color: #555;
 }
 
 // === Arrow Controls (Optional) ===
