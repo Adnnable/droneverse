@@ -1,0 +1,78 @@
+/* components/Footer.module.css */
+.footer {
+  background-color: #0d0d0d;
+  color: white;
+  padding: 40px 30px;
+  font-family: Arial, sans-serif;
+}
+
+.topSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.logoColumn {
+  max-width: 250px;
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #ffb400;
+}
+
+.linkGroup {
+  min-width: 150px;
+}
+
+.linkGroup h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.linkGroup ul {
+  list-style: none;
+  padding: 0;
+}
+
+.linkGroup li {
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.linkGroup li:hover {
+  color: #ffb400;
+}
+
+.bottomSection {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.bottomSection a {
+  color: #ffb400;
+  text-decoration: none;
+}
+
+.socialIcons a {
+  color: #aaa;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+.socialIcons a:hover {
+  color: #ffb400;
+}
