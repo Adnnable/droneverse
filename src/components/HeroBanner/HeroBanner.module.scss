@@ -37,22 +37,63 @@
     color: #ffc107;
 }
 
+// .droneWrapper {
+//     width: 100%;
+//     position: absolute;
+//     top: 50px;
+//     display: flex;
+//     justify-content: center;
+//     z-index: 5;
+// }
+
+// .drone {
+//     margin-right: 80px;
+// }
+
 .droneWrapper {
-    width: 100%;
-    position: absolute;
-    top: 50px;
-    display: flex;
-    justify-content: center;
-    z-index: 5;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+
+  .drone {
+    margin-right: 80px;
+    animation: flyDrone 7s ease-in-out infinite;
+    transform-origin: center;
+  }
 }
 
-.drone {
-    margin-right: 80px;
+@keyframes flyDrone {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) translateX(-3px) rotate(-0.5deg) scale(1.01);
+  }
+  50% {
+    transform: translateY(6px) translateX(3px) rotate(0.5deg) scale(1.005);
+  }
+  75% {
+    transform: translateY(-8px) translateX(-2px) rotate(-0.3deg) scale(1.01);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+
+.globeWrapper{
+    display: flex;
+    justify-content: flex-start;
 }
 
 .earth {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    right: -100px;
+    // right: -500px;
     bottom: 0;
     opacity: 0.9;
     z-index: 1;

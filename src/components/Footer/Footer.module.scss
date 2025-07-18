@@ -3,6 +3,10 @@
   overflow: hidden;
   color: #fff;
   font-family: 'Poppins', sans-serif;
+
+  // 
+  position: relative;
+  top: -690px;
 }
 
 .videoBackground {
@@ -13,16 +17,49 @@
   width: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.3;
 }
 
 .overlay {
   position: relative;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.7);  // Much darker black overlay
-
-  // background-color: transparent;
   padding: 3rem 2rem;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // adjust for readability
+    z-index: 2;
+  }
+}
+
+.overlayinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1) 0%, // pure black at the top
+      rgba(0, 0, 0, 0.9) 50%, // still very dark
+      rgba(0, 0, 0, 0.4) 80%, // fading
+      rgba(0, 0, 0, 0.5) 90%, // fading
+      rgba(10, 10, 30, 0.3) 100% // subtle bluish tint at bottom
+    );
+}
+
+.overlayinner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1), transparent 70%);
+  z-index: 1;
 }
 
 .topSection {
@@ -31,6 +68,10 @@
   justify-content: space-between;
   gap: 3rem;
   margin-bottom: 2rem;
+
+  p {
+    color: #fff;
+  }
 }
 
 .logoColumn {
@@ -38,7 +79,7 @@
   min-width: 250px;
 
   .logo {
-    width: 160px;
+    width: 266px;
     margin-bottom: 1.5rem;
   }
 
@@ -71,8 +112,8 @@
 
     li {
       font-size: 14px;
-      margin-bottom: 0.5rem;
-      color: #e1e1e1;
+      margin-bottom: 1.3rem;
+      color: #fff;
       cursor: pointer;
       transition: color 0.2s;
 
@@ -88,12 +129,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 1rem;
   font-size: 13px;
 
   p {
     margin: 0;
+
     a {
       color: #fdb714;
       text-decoration: none;
@@ -118,4 +159,15 @@
       color: #fdb714;
     }
   }
+}
+
+
+.footer .overlay h4,
+.footer .overlay p,
+.footer .overlay ul li,
+.footer .overlay a,
+.logo {
+  color: #fff !important;
+  z-index: 3;
+  position: relative;
 }

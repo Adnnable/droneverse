@@ -15,15 +15,15 @@ export default function Footer() {
         <source src="../../../assets/img/footer/bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className={styles.blackOverlay} />
       {/* Content Overlay */}
       <div className={styles.overlay}>
+        <div className={styles.overlayinner}></div>
         <div className={styles.topSection}>
           <div className={styles.logoColumn}>
             <h2 className={styles.logo}>
-              Drone <span className={styles.highlight}>Verse</span>
+              <img className={styles.logo} src={'/assets/logo/white-logo.svg'} alt='Droneverse Logo' width={266} height={52} />
             </h2>
-            <p>
+            <p className={styles.text}>
               701A, Delhi - Jaipur Exp, Block A,
               <br />
               Sector 34, Gurugram, Haryana 122001

@@ -131,7 +131,7 @@
     background: linear-gradient(to bottom,
             rgba(0, 0, 0, 1) 0%, // pure black at the top
             rgba(0, 0, 0, 0.9) 50%, // still very dark
-            rgba(0, 0, 0, 0.5) 50%, // fading
+            rgba(0, 0, 0, 0.5) 60%, // fading
             rgba(10, 10, 30, 0.3) 100% // subtle bluish tint at bottom
         );
 }

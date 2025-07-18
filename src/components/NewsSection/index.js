@@ -2,6 +2,7 @@ import styles from './News.module.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+import { FaLinkedin } from "react-icons/fa";
 const bannerImages = [
   '../../../assets/img/news/1.png',
   '../../../assets/img/news/2.png',
@@ -68,7 +69,7 @@ export default function NewsSection() {
 
   return (
     <section className={styles.wrapper}>
-       {/* Banner Carousel */}
+      {/* Banner Carousel */}
       <div className={styles.carousel}>
         <Slider {...settings}>
           {bannerImages.map((src, index) => (
@@ -99,21 +100,24 @@ export default function NewsSection() {
         </div>
       </div>
 
-     
+
 
       {/* News Cards */}
       <div className={styles.newsGrid}>
         {newsItems.map((item, index) => (
           <div key={index} className={styles.card}>
+            <h4 className={styles.newcardTitle}>{item.title} <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className={styles.icon} />
+            </a></h4>
             <img src={item.image} alt={item.title} className={styles.cardImage} />
             <div className={styles.cardContent}>
               <div className={styles.cardHeader}>
-                <h4>{item.title}</h4>
-                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  <img src="/icons/linkedin.svg" alt="LinkedIn" className={styles.icon} />
-                </a>
+
+
               </div>
-              <p>{item.description}</p>
+              <p className={styles.newsDesc}>
+                {item.description}
+              </p>
             </div>
           </div>
         ))}

@@ -65,13 +65,12 @@ const HeroBanner = () => {
             </div>
 
             {/* Earth Globe */}
-            <Image
-                src="/assets/hero/earth.png"
-                alt="Globe"
-                width={600}
-                height={600}
-                className={styles.earth}
-            />
+            <div className={styles.globeWrapper}>
+                <video autoPlay loop muted playsInline className={styles.earth}>
+                    <source src="/assets/videos/globe.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </section>
     );
 };
