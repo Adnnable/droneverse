@@ -1,37 +1,37 @@
 import styles from './News.module.scss'
 
 const bannerImages = [
-  '/news/banner-1.jpg',
-  '/news/banner-2.jpg',
-  '/news/banner-3.jpg',
-  '/news/banner-1.jpg', // repeat for visual continuity
+  '../../../assets/img/news/1.png',
+  '../../../assets/img/news/2.png',
+  '../../../assets/img/news/3.png',
+  '../../../assets/img/news/4.png', // repeat for visual continuity
 ];
 
 const newsItems = [
   {
     title: 'Defence department',
-    image: '../../../assets/img/news',
+    image: '../../../assets/img/news/news1.png',
     description:
       "Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
     link: 'https://www.linkedin.com',
   },
   {
     title: 'Defence department',
-    image: '/news/news-2.jpg',
+    image: '../../../assets/img/news/news1.png',
     description:
       "Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
     link: 'https://www.linkedin.com',
   },
   {
     title: 'Defence department',
-    image: '/news/news-2.jpg',
+    image: '../../../assets/img/news/news1.png',
     description:
       "Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
     link: 'https://www.linkedin.com',
   },
   {
     title: 'Defence department',
-    image: '/news/news-1.jpg',
+    image: '../../../assets/img/news/news1.png',
     description:
       "Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
     link: 'https://www.linkedin.com',
