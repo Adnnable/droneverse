@@ -1,0 +1,112 @@
+.wrapper {
+  padding: 60px 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  margin-bottom: 40px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.bannerImage {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.bannerImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newsHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.newsHeader h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.newsHeader p {
+  color: #333;
+  font-size: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardHeader h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.cardContent p {
+  font-size: 14px;
+  color: #555;
+}
+
+.arrows {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.arrowBtn {
+  background: #f0f0f0;
+  border: none;
+  font-size: 24px;
+  padding: 8px 16px;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
