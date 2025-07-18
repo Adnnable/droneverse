@@ -22,31 +22,37 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
-  justify-items: center;
+  // justify-items: center;
 }
+
+
+
 
 .card {
+  max-width: 320px;
+  height: 280px;          /* fixed height */
   background-color: #1a1a1a;
   border-radius: 16px;
-  padding: 20px;
-  max-width: 360px;
   box-shadow: 0 6px 18px rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
+  overflow: hidden;       /* hide overflow */
+  display: flex;
+  flex-direction: column;
 }
 
 .image {
   width: 100%;
-  border-radius: 8px;
-  object-fit: contain;
+  height: 70%;            /* take half of card height */
+  object-fit: cover;      /* cover to fill area */
+  border-radius: 16px 16px 0 0;  /* rounded top corners only */
 }
 
 .text {
-  margin-top: 16px;
-  line-height: 1.4;
+  height: 30%;            /* other half */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* center text vertically */
+  color: #ccc;
 }
 
 .text p {
@@ -57,7 +63,11 @@
 
 .text strong {
   font-size: 16px;
-  display: block;
   color: #fff;
-  margin-top: 4px;
+  margin-top: 8px;
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
 }
