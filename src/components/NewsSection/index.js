@@ -1,5 +1,7 @@
 import styles from './News.module.scss'
-
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 const bannerImages = [
   '../../../assets/img/news/1.png',
   '../../../assets/img/news/2.png',
@@ -39,15 +41,45 @@ const newsItems = [
 ];
 
 export default function NewsSection() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <section className={styles.wrapper}>
       {/* Banner Carousel */}
       <div className={styles.carousel}>
-        {bannerImages.map((src, index) => (
-          <div key={index} className={styles.bannerImage}>
-            <img src={src} alt={`Banner ${index + 1}`} />
-          </div>
-        ))}
+        <Slider {...settings}>
+          {bannerImages.map((src, index) => (
+            <div
+              key={index}
+              className={`${styles.bannerImageWrapper} ${index % 2 !== 0 ? styles.shifted : ''}`}
+            >
+              <div className={styles.bannerImage}>
+                <img src={src} alt={`Banner ${index + 1}`} />
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
 
       {/* News Content */}

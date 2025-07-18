@@ -34,12 +34,12 @@ const Header = () => {
                 <Grid2 container spacing={2} sx={{ width: '100%' }}>
                     <Grid2 size={3}>
                         <Box display="flex" alignItems="center" gap={3} sx={{ height: '100%' }}>
-                            <Image className={styles.logo} src={'/assets/logo/white-logo.svg'} alt='Droneverse Logo' width={0} height={0} />
+                            <Image className={styles.logo} src={'/assets/logo/black-logo.svg'} alt='Droneverse Logo' width={0} height={0} />
                         </Box>
                     </Grid2>
                     <Grid2 size={9}>
                         {/* Navigation Menu */}
-                        <Box display="flex" alignItems="center" justifyContent={"flex-end"} gap={5} sx={{ height: '100%' }}>
+                        <Box display="flex" alignItems="center" justifyContent={"flex-end"} gap={2} sx={{ height: '100%' }}>
                             {menuItems.map((item) => (
                                 <Box key={item}>
                                     <Button
@@ -59,7 +59,16 @@ const Header = () => {
                                     </Menu>
                                 </Box>
                             ))}
-
+                            <Button
+                                className={styles.menuItem}
+                            >
+                                Career
+                            </Button>
+                            <Button
+                                className={styles.menuItem}
+                            >
+                                Contact us
+                            </Button>
                             {/* Enroll Button */}
                             <Button
                                 variant="contained"

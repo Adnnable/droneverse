@@ -74,7 +74,7 @@ const DefenceSection = () => {
                         src="/assets/img/defence-solution-usp.png"
                         alt="Defence"
                         width={800}
-                        height={535}
+                        height={480}
                         className={styles.image}
                     />
                 </div>

@@ -1,66 +1,232 @@
+// .aboutContainer {
+//     background-color: #000;
+//     color: #fff;
+//     padding: 80px 20px;
+//     text-align: center;
+// }
+
+// .heading {
+//     font-size: 3.5rem;
+//     font-weight: 700;
+//     line-height: 1.2;
+//     margin-bottom: 20px;
+// }
+
+// .subtext {
+//     max-width: 1200px;
+//     margin: 0 auto 10px;
+//     font-size: 1rem;
+//     color: #ccc;
+//     line-height: 1.3;
+// }
+
+// .statsGrid {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     gap: 24px;
+//     margin-bottom: 10px;
+//     padding: 0 30px;
+// }
+
+// .statCard {
+//     background-color: #1c1c1c;
+//     padding: 32px 40px;
+//     border-radius: 16px;
+//     min-width: 200px;
+//     max-width: 260px;
+//     flex: 1;
+//     color: white;
+//     text-align: left;
+// }
+
+// .statNumber {
+//     font-size: 2rem;
+//     font-weight: 700;
+//     margin-bottom: 6px;
+// }
+
+// .statLabel {
+//     font-size: 0.95rem;
+//     color: #ccc;
+// }
+
+// .ctaButton {
+//     background-color: #ffc107;
+//     color: #000;
+//     font-weight: 600;
+//     text-transform: none;
+//     border-radius: 8px;
+//     padding: 10px 30px;
+//     font-size: 1rem;
+
+//     &:hover {
+//         background-color: #ffb300;
+//     }
+// }
+
+
+
 .aboutContainer {
     background-color: #000;
     color: #fff;
-    padding: 80px 20px;
+    padding: 80px 0px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icon {
+    margin-bottom: 25px;
+
+    img {
+        width: 70px;
+        height: auto;
+    }
 }
 
 .heading {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .subtext {
     max-width: 1200px;
-    margin: 0 auto 10px;
+    margin: 0 auto 40px;
     font-size: 1rem;
+    line-height: 1.5;
     color: #ccc;
-    line-height: 1.3;
 }
 
-.statsGrid {
+.aboutUsBg {
+    position: relative;
+    overflow: hidden;
+    // padding: 0px 20px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+
+    // Overlay to darken the video a bit
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); // adjust for readability
+        z-index: 2;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0%, // pure black at the top
+            rgba(0, 0, 0, 0.9) 50%, // still very dark
+            rgba(0, 0, 0, 0.5) 50%, // fading
+            rgba(10, 10, 30, 0.3) 100% // subtle bluish tint at bottom
+        );
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.1), transparent 70%);
+    z-index: 1;
+}
+
+.videoBackground {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 1000px;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cardGrid {
+    // margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
-    margin-bottom: 10px;
-    padding: 0 30px;
+    margin-bottom: 40px;
 }
 
-.statCard {
-    background-color: #1c1c1c;
-    padding: 32px 40px;
+.card {
+    background-color: #1a1a1a;
     border-radius: 16px;
-    min-width: 200px;
-    max-width: 260px;
-    flex: 1;
-    color: white;
-    text-align: left;
+    padding: 30px 24px;
+    text-align: center;
+    width: 302px;
+    height: 255px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
 }
 
-.statNumber {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 6px;
+.cardTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
-.statLabel {
-    font-size: 0.95rem;
+.cardSubtitle {
+    font-size: 0.9rem;
     color: #ccc;
+    line-height: 1.4;
 }
 
-.ctaButton {
+.buttonGroup {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.yellowBtn {
     background-color: #ffc107;
     color: #000;
-    font-weight: 600;
     text-transform: none;
+    font-weight: 600;
+    padding: 10px 24px;
     border-radius: 8px;
-    padding: 10px 30px;
-    font-size: 1rem;
 
     &:hover {
         background-color: #ffb300;
+    }
+}
+
+.whiteBtn {
+    background-color: #fff;
+    color: #000;
+    text-transform: none;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: #eee;
     }
 }

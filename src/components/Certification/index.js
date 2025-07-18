@@ -30,7 +30,9 @@ export default function Certifications() {
       <div className={styles.grid}>
         {certifications.map((item, index) => (
           <div className={styles.card} key={index}>
-            <img src={item.img} alt={`Certificate ${index + 1}`} className={styles.image} />
+            <div className={styles.cardImage}>
+              <img src={item.img} alt={`Certificate ${index + 1}`} className={styles.image} />
+            </div>
             <div className={styles.text}>
               <p>{item.title}</p>
               <strong>{item.subtitle}</strong>

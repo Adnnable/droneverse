@@ -4,44 +4,74 @@ import Image from 'next/image';
 
 const HeroBanner = () => {
     return (
-        <section className={styles.heroContainer}>
-            {/* Drones */}
-            <Image
-                src="/assets/img/hero-section/drone.png"
-                alt="Top Drone"
-                width={100}
-                height={100}
-                className={`${styles.drone} ${styles.droneTop}`}
-            />
-            <Image
-                src="/assets/img/hero-section/drone.png"
-                alt="Bottom Left Drone"
-                width={100}
-                height={100}
-                className={`${styles.drone} ${styles.droneBottomLeft}`}
-            />
-            <Image
-                src="/assets/img/hero-section/drone.png"
-                alt="Bottom Right Drone"
-                width={100}
-                height={100}
-                className={`${styles.drone} ${styles.droneBottomRight}`}
-            />
+        // <section className={styles.heroContainer}>
+        //     {/* Drones */}
+        //     <Image
+        //         src="/assets/img/hero-section/drone.png"
+        //         alt="Top Drone"
+        //         width={100}
+        //         height={100}
+        //         className={`${styles.drone} ${styles.droneTop}`}
+        //     />
+        //     <Image
+        //         src="/assets/img/hero-section/drone.png"
+        //         alt="Bottom Left Drone"
+        //         width={100}
+        //         height={100}
+        //         className={`${styles.drone} ${styles.droneBottomLeft}`}
+        //     />
+        //     <Image
+        //         src="/assets/img/hero-section/drone.png"
+        //         alt="Bottom Right Drone"
+        //         width={100}
+        //         height={100}
+        //         className={`${styles.drone} ${styles.droneBottomRight}`}
+        //     />
 
-            {/* Main Heading */}
-            <h1 className={styles.heading}>
-                India's No. 1 DGCA-Approved <br /> Remote Pilot Program
-            </h1>
+        //     {/* Main Heading */}
+        //     <h1 className={styles.heading}>
+        //         India's No. 1 DGCA-Approved <br /> Remote Pilot Program
+        //     </h1>
 
-            {/* Trusted avatars */}
-            <div className={styles.avatarGroup}>
-                <div className={styles.avatars}>
-                    <img src="/assets/img/avatar/happy-clients.png" alt="Avatar" width={0} height={0} className={styles.avatar} />
-                </div>
+        //     {/* Trusted avatars */}
+        //     <div className={styles.avatarGroup}>
+        //         <div className={styles.avatars}>
+        //             <img src="/assets/img/avatar/happy-clients.png" alt="Avatar" width={0} height={0} className={styles.avatar} />
+        //         </div>
+        //     </div>
+
+        //     {/* Scroll Indicator */}
+        //     <div className={styles.scrollIndicator}></div>
+        // </section>
+        <section className={styles.hero}>
+            <div className={styles.content}>
+                <div className={styles.badge}>For government and military</div>
+                <h1 className={styles.heading}>
+                    AI-Driven <br />
+                    <span className={styles.highlight}>Autonomous</span><br />
+                    <span className={styles.highlight}>CsUAS</span>
+                </h1>
             </div>
 
-            {/* Scroll Indicator */}
-            <div className={styles.scrollIndicator}></div>
+            {/* Floating Drone Image */}
+            <div className={styles.droneWrapper}>
+                <Image
+                    src="/assets/img/hero-section/drone.png"
+                    alt="Drone"
+                    width={246}
+                    height={126}
+                    className={styles.drone}
+                />
+            </div>
+
+            {/* Earth Globe */}
+            <Image
+                src="/assets/hero/earth.png"
+                alt="Globe"
+                width={600}
+                height={600}
+                className={styles.earth}
+            />
         </section>
     );
 };

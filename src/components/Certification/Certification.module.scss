@@ -21,7 +21,6 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
   justify-items: center;
 }
 
@@ -29,13 +28,23 @@
   background-color: #1a1a1a;
   border-radius: 16px;
   padding: 20px;
-  max-width: 360px;
+  max-width: 412px;
+  height: 351px;
+
   box-shadow: 0 6px 18px rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
+}
+
+.cardImage {
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .image {
