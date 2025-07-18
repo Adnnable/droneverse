@@ -1,18 +1,18 @@
-import styles from './Presence.module.scss'
+import styles from './Presence.module.scss';
 import { useState } from 'react';
 
 const locations = [
   {
     name: 'Gurugram',
-    top: '30%',
+    top: '42%',
     left: '55%',
     address: '70A, Delhi - Jaipur Expy, Block A, Sector 34, Gurugram, Haryana 122101',
   },
-  { name: 'Delhi', top: '40%', left: '45%' },
-  { name: 'Bhopal', top: '30%', left: '30%' },
-  { name: 'Banglore', top: '70%', left: '40%' },
-  { name: 'Tamil naidu', top: '80%', left: '60%' },
-  { name: 'Bihar', top: '50%', left: '60%' },
+  { name: 'Delhi', top: '37%', left: '49%' },
+  { name: 'Bhopal', top: '33%', left: '39%' },
+  { name: 'Bihar', top: '45%', left: '62%' },
+  { name: 'Banglore', top: '65%', left: '44%' },
+  { name: 'Tamil naidu', top: '75%', left: '57%' },
 ];
 
 export default function Presence() {
@@ -28,7 +28,7 @@ export default function Presence() {
 
       {/* Toggle buttons */}
       <div className={styles.toggleButtons}>
-        {['Office', 'Institute', 'R&D centre'].map(tab => (
+        {['Office', 'Institute', 'R&D centre'].map((tab) => (
           <button
             key={tab}
             className={`${styles.tabButton} ${activeTab === tab ? styles.active : ''}`}
@@ -41,23 +41,29 @@ export default function Presence() {
 
       {/* Map container */}
       <div className={styles.mapContainer}>
-        <img src="/images/india-map.png" alt="India Map" className={styles.mapImage} />
+        <img
+          src="/images/india-map.png"
+          alt="India Map"
+          className={styles.mapImage}
+        />
 
         {locations.map((loc, index) => (
           <div
             key={index}
             className={styles.marker}
             style={{ top: loc.top, left: loc.left }}
-            onClick={() => setSelectedLocation(loc.name === 'Gurugram' ? loc : null)}
+            onClick={() =>
+              setSelectedLocation(
+                selectedLocation === loc.name ? null : loc.name
+              )
+            }
           >
             <div className={styles.pin}>
               <div className={styles.icon}>✦</div>
             </div>
 
             {selectedLocation === loc.name && loc.address && (
-              <div className={styles.tooltip}>
-                {loc.address}
-              </div>
+              <div className={styles.tooltip}>{loc.address}</div>
             )}
           </div>
         ))}
