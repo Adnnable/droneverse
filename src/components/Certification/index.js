@@ -2,17 +2,17 @@ import styles from './Certification.module.scss';
 
 const certifications = [
   {
-    img: '/certifications/cert-1.jpg',
+    img: '../../../assets/img/certification/1.png',
     title: 'Rotocraft sub-category',
     subtitle: 'RPAS class:small',
   },
   {
-    img: '/certifications/cert-2.jpg',
+    img: '../../../assets/img/certification/2.png',
     title: 'Rotocraft sub-category',
     subtitle: 'RPAS class:small',
   },
   {
-    img: '/certifications/cert-3.jpg',
+    img: '../../../assets/img/certification/3.png',
     title: 'Rotocraft sub-category',
     subtitle: 'RPAS class:small',
   },

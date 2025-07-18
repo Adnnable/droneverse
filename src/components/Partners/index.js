@@ -1,17 +1,17 @@
 import styles from './Partners.module.scss'
 const partners = [
-  { name: 'IndianOil', img: '/partners/indian-oil.png' },
-  { name: 'IFFCO', img: '/partners/iffco.png' },
-  { name: 'Sanshtha Sevak', img: '/partners/sanstha-sevak.png' },
-  { name: 'Tata Power', img: '/partners/tata-power.png' },
-  { name: 'Garuda Aerospace', img: '/partners/garuda.png' },
-  { name: 'Defense Org', img: '/partners/defense.png' },
-  { name: 'Air Force', img: '/partners/air-force.png' },
-  { name: 'CRPF', img: '/partners/crpf.png' },
-  { name: 'General Aeronautics', img: '/partners/general-aeronautics.png' },
-  { name: 'Go Green', img: '/partners/go-green.png' },
-  { name: 'SB Jain', img: '/partners/sb-jain.png' },
-  { name: 'Agri Wings', img: '/partners/agri-wings.png' },
+  { name: 'IndianOil', img: '../../../assets/img/partners/img1.png' },
+  { name: 'IFFCO', img: '../../../assets/img/partners/img2.png' },
+  { name: 'Sanshtha Sevak', img: '../../../assets/img/partners/img3.png' },
+  { name: 'Tata Power', img: '../../../assets/img/partners/img4.png' },
+  { name: 'Garuda Aerospace', img: '../../../assets/img/partners/img5.png' },
+  { name: 'Defense Org', img: '../../../assets/img/partners/img6.png' },
+  { name: 'Air Force', img: '../../../assets/img/partners/img7.png' },
+  { name: 'CRPF', img: '../../../assets/img/partners/img8.png' },
+  { name: 'General Aeronautics', img: '../../../assets/img/partners/img9.png' },
+  { name: 'Go Green', img: '../../../assets/img/partners/img10.png' },
+  { name: 'SB Jain', img: '../../../assets/img/partners/img11.png' },
+  { name: 'Agri Wings', img: '../../../assets/img/partners/img12.png' },
 ];
 
 export default function Partners() {

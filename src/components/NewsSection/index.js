@@ -10,7 +10,7 @@ const bannerImages = [
 const newsItems = [
   {
     title: 'Defence department',
-    image: '/news/news-1.jpg',
+    image: '../../../assets/img/news',
     description:
       "Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
     link: 'https://www.linkedin.com',
