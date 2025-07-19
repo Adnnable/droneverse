@@ -11,11 +11,13 @@
   //
 
   .textPartContainer {
-    width: 100%;
-    position: relative;
-    top: 300px;
+    max-width: 100%;
+    top: 0px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 1;
   }
-
 
   .title {
     font-size: 3rem;
@@ -37,7 +39,7 @@
     justify-content: center;
     margin-bottom: 30px;
     gap: 10px;
-    background-color: #FFF8E6;
+    background-color: #fff8e6;
     position: relative;
     z-index: 2;
   }
