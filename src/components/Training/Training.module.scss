@@ -59,26 +59,34 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 16px;
 }
 
 .imageWrapper img {
   width: 100%;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 .cardContent {
   padding: 16px;
   text-align: left;
+
+   h4{
+      margin-bottom: 10px;
+    }
 }
 
 .badge {
-  font-size: 12px;
-  color: #666;
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 6px;
+     font-size: 14px;
+    color: #008000;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 6px;
 }
 
 .duration {
@@ -89,9 +97,14 @@
 }
 
 .cardContent ul {
-  padding-left: 18px;
-  margin: 0 0 12px;
+  list-style: none;
+  padding-left: 5px;
+  margin: 0 0 20px;
   font-size: 14px;
+
+  li{
+    margin-bottom: 10px;
+  }
 }
 
 .actions {

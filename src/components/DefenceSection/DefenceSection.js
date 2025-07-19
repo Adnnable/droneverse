@@ -1,3 +1,4 @@
+import FPVSection from "../FPVSection/FPVSection";
 import styles from "./DefenceSection.module.scss";
 import Image from "next/image";
 
@@ -25,15 +26,32 @@ export default function DefenceSection() {
         </div>
         <div className={styles.imageWrapper}>
           <Image
-            src="/assets/images/fighter-jet.png"
+            src="/assets/img/defence/fighter-jet.svg"
             alt="Fighter Jet"
-            width={700}
+            width={786}
             height={450}
             className={styles.image}
             priority
           />
+          <div  className={styles.gridBallsWrapper}>
+            <Image
+              src="/assets/img/defence/grid-balls.svg"
+              alt="Drone"
+              width={286}
+              height={71}
+              className={styles.gridBalls}
+            />
+            <Image
+              src="/assets/img/defence/grid-balls.svg"
+              alt="Drone"
+              width={286}
+              height={71}
+              className={styles.gridBalls}
+            />
+          </div>
         </div>
       </div>
+      <FPVSection />
     </section>
   );
 }

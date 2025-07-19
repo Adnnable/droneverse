@@ -1,0 +1,87 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #151515;
+    padding: 40px 60px;
+    border-radius: 20px;
+    color: #fff;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 40px;
+}
+
+.left {
+    flex: 1 1 600px;
+
+    .heading {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .subtext {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 32px;
+        color: #ccc;
+    }
+}
+
+.right {
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .droneImage {
+        object-fit: contain;
+        max-width: 100%;
+    }
+}
+
+.droneCards {
+    .features {
+        display: flex;
+        gap: 20px;
+    }
+
+    .card {
+        flex: 1 1 240px;
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.02), #1a1a1a);
+        border-radius: 16px;
+        padding: 80px 20px 20px 20px;
+        background: linear-gradient(to bottom,
+                rgba(255, 255, 255, 0) 10%,
+                rgba(255, 184, 1, 0.1) 80%,
+                rgba(255, 184, 1, 0.1) 80%,
+                rgba(255, 184, 1, 0.1) 80%,
+                rgba(255, 184, 1, 0.1) 100%,
+                rgba(255, 184, 1, 0.1) 100%);
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #aaa;
+            line-height: 1.2;
+        }
+    }
+
+    .badge {
+        width: 48px;
+        height: 48px;
+        background: #555;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16spx;
+        font-weight: 500;
+        color: white;
+        margin-bottom: 25px;
+    }
+}
