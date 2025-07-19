@@ -171,18 +171,33 @@
     margin-bottom: 40px;
 }
 
+
 .card {
     background-color: #1a1a1a;
     border-radius: 16px;
     padding: 30px 24px;
     text-align: center;
-    width: 302px;
+    width: 260px;
     height: 255px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0.9;
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    @media (max-width: 1024px) {
+        width: 45%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .cardTitle {
@@ -190,13 +205,22 @@
     font-weight: 600;
     margin-top: 25px;
     margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
 }
 
 .cardSubtitle {
     font-size: 0.9rem;
     color: #ccc;
     line-height: 1.4;
+
+    @media (max-width: 768px) {
+        font-size: 0.85rem;
+    }
 }
+
 
 .buttonGroup {
     margin-top: 20px;

@@ -1,7 +1,5 @@
 .wrapper {
   padding: 90px 70px;
-
-  // 
   position: relative;
   top: -690px;
 }
@@ -61,45 +59,6 @@
 
 .newsHeader {
   max-width: 70%;
-}
-
-.newsHeader h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.newsHeader p {
-  color: #333;
-  font-size: 16px;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.arrows {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.arrowBtn {
-  background: #f0f0f0;
-  border: none;
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s ease;
-
-  &:hover {
-    background: #ddd;
-  }
-
-
-  // ---- CAROUSEL SECTION (ZIG-ZAG) ----
-}
-
-.newsHeader {
   text-align: center;
   margin-bottom: 40px;
 
@@ -118,6 +77,29 @@
   }
 }
 
+.arrows {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.arrowBtn {
+  background: #f0f0f0;
+  border: none;
+  font-size: 24px;
+  padding: 8px 16px;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #e0e0e0;
+  }
+}
+
 // === News Cards Grid ===
 .newsGrid {
   display: grid;
@@ -131,7 +113,10 @@
   overflow: hidden;
   background-color: #fff;
   transition: box-shadow 0.3s ease;
-  width: 302px;
+
+  // ✅ Responsive sizing
+  width: 100%;
+  max-width: 280px;
   height: 448px;
 
   &:hover {
@@ -164,18 +149,16 @@
 
   .newsDesc {
     position: relative;
-    max-height: 140px; // limit visible height
+    max-height: 140px;
     overflow: hidden;
     font-size: 16px;
     line-height: 1.6;
     color: #000;
 
-    // gradient fade-out effect using mask
     mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0));
     -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0));
   }
 }
-
 
 .cardHeader {
   display: flex;
@@ -195,23 +178,38 @@
   height: 20px;
 }
 
-// === Arrow Controls (Optional) ===
-.arrows {
-  margin-top: 30px;
-  text-align: center;
+// === Responsive Fixes ===
+@media (max-width: 1366px) {
+  .wrapper {
+    padding: 60px 40px;
+  }
+
+  .card {
+    max-width: 260px;
+    height: 420px;
+  }
+
+  .newsGrid {
+    gap: 16px;
+  }
 }
 
-.arrowBtn {
-  background: #f0f0f0;
-  border: none;
-  font-size: 24px;
-  padding: 8px 16px;
-  margin: 0 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.2s;
+@media (max-width: 768px) {
+  .newsHeader h2 {
+    font-size: 24px;
+  }
 
-  &:hover {
-    background: #e0e0e0;
+  .newsHeader p {
+    font-size: 14px;
+  }
+
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .cardContent p,
+  .cardContent .newsDesc {
+    font-size: 14px;
   }
 }

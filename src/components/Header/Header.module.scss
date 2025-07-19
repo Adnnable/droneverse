@@ -1,42 +1,107 @@
 .header {
-    background-color: #ffff;
+    background-color: #fff;
     box-shadow: none;
-    padding: 15px 120px 15px 60px;
+    padding: 15px 80px;
     position: sticky;
     top: 0;
     z-index: 1100;
-}
 
-.yellow {
-    background-color: #ffc107;
-}
+    @media (max-width: 1440px) {
+        padding: 12px 60px;
+    }
 
-.white {
-    background-color: #ffffff;
-}
+    @media (max-width: 1280px) {
+        padding: 12px 40px;
+    }
 
-.title {
-    font-weight: 600;
-    color: white;
-}
+    @media (max-width: 1024px) {
+        padding: 10px 30px;
+    }
 
-.highlight {
-    color: #ffc107;
-}
-
-.subtitle {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: #ccc;
+    @media (max-width: 768px) {
+        padding: 8px 20px;
+    }
 }
 
 .logo {
-    width: 310px;
-    height: 60px;
+    width: 260px;
+    height: auto;
+
+    @media (max-width: 1440px) {
+        width: 220px;
+    }
+
+    @media (max-width: 1024px) {
+        width: 180px;
+    }
+
+    @media (max-width: 768px) {
+        width: 160px;
+    }
 }
 
 .menuItem {
     font-size: 16px;
     color: #080114;
     text-transform: none;
+    padding: 4px 8px;
+    min-width: fit-content;
+
+    @media (max-width: 1440px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 1280px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 13px;
+    }
+}
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @media (max-width: 1440px) {
+        gap: 24px;
+    }
+
+    @media (max-width: 1280px) {
+        gap: 16px;
+    }
+
+    @media (max-width: 1024px) {
+        gap: 12px;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.enrollButton {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    font-size: 1rem !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1) !important;
+
+    &:hover {
+        background-color: #ffb300 !important;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 8px 20px !important;
+        font-size: 0.95rem !important;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem !important;
+    }
 }
