@@ -11,7 +11,7 @@ const LOCATIONS = {
     { name: 'Bangalore', top: '72%', left: '35%', address: '' },
     { name: 'Gurugram', top: '44%', left: '43%', address: '70A, Delhi - Jaipur Expy, Block A, Sector 34, Gurugram, Haryana 122101' },
     { name: 'Bihar', top: '56%', left: '54%', address: '' },
-    { name: 'Tamil nadu', top: '95%', left: '40%', address: '' },
+    { name: 'Tamil nadu', top: '100%', left: '40%', address: '' },
   ],
   Institute: [],
   'R&D centre': [],
@@ -70,7 +70,7 @@ const PresenceSection = () => {
 
 
       <div className={styles.mapWrapper}>
-        <Image src="/assets/img/presence/Vector.svg" alt="India Map" width={800} height={400} className={styles.mapImage} />
+        <Image src="/assets/img/presence/states.svg" alt="India Map" width={800} height={400} className={styles.mapImage} />
         {LOCATIONS[activeTab].map((loc, idx) => (
           <div
             key={idx}
