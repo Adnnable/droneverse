@@ -6,6 +6,7 @@ import Partners from './Partners';
 import NewsSection from './NewsSection';
 import Certification from './Certification';
 import Training from './Training';
+import DefenceSection from './DefenceSection/DefenceSection';
 
 export default function RootLayout({ children }) {
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
         <>
             <Header />
             {children}
+            <DefenceSection/>
             <Training />
             <Certification />
             <NewsSection />
